@@ -23,9 +23,12 @@
 
 ## Users can spend money at some merchant (merchant verifies this some how)
 
-## Merchants then send the bank what they received from the merchant to verify again (banks get sent 10 chunks that are partially opened)
+## Merchants then send the bank what they received from the merchant to verify again 
 
-1. 
+1. Banks get sent 10 chunks that are partially opened, the partially opened chunks were chosen by the merchant.
+2. Each chunk either has I⊕a, d, and x or a, c, and y. This is used to generate f(x, y) and if the f(x, y) we generate matches the one given then we know the chunk is valid.
+3. Step 2 is done 10 times
 
+(I⊕a = SHA-256(I concatenated to a with a padding of 0's on the left up to 128 bits))
 
 
